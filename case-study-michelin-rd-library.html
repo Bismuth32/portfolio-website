@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Case study: Create a new solution for Michelin scientific documentation management — Michelin R&D"/>
+  <title>Scientific documentation management — Michelin R&D · JB Schneider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="case-study.css"/>
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('jb-portfolio-theme');
+        if (s === 'dark') document.documentElement.classList.add('dark-mode');
+        else if (s === 'light') document.documentElement.classList.add('theme-light');
+      } catch (_) {}
+    })();
+  </script>
+</head>
+<body class="case-study-page">
+
+<!-- ── NAV ──────────────────────────────────── -->
+<nav>
+  <a href="index.html" class="nav-logo">JB Schneider</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html#work">Use-cases</a></li>
+      <li><a href="https://www.instagram.com/jb_schneidr/" target="_blank" rel="noopener noreferrer">Personal work</a></li>
+      <li><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Get in touch</a></li>
+    </ul>
+    <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="theme-toggle__track">
+        <span class="theme-toggle__thumb"></span>
+      </span>
+      <span class="theme-toggle__icons" aria-hidden="true">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v1.5M12 19.5V21M4.22 4.22l1.06 1.06M18.72 18.72l1.06 1.06M3 12h1.5M19.5 12H21M4.22 19.78l1.06-1.06M18.72 5.28l1.06-1.06M12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </span>
+    </button>
+  </div>
+</nav>
+
+<article class="case-study">
+
+  <!-- Hero -->
+  <header class="case-study-hero">
+    <div class="case-study-hero-inner">
+      <p class="case-study-meta">Michelin · 2018</p>
+      <h1 class="case-study-title">Create a new solution for Michelin scientific documentation management</h1>
+      <div class="case-study-kpi-tile">
+        <h3 class="case-study-kpi-title">KPIs</h3>
+        <div class="case-study-kpi-grid">
+          <div class="case-study-kpi-col">
+            <p class="case-study-kpi-line">+10% scientific articles published</p>
+            <p class="case-study-kpi-line case-study-kpi-sub">Compared to the previous year</p>
+          </div>
+          <div class="case-study-kpi-col">
+            <p class="case-study-kpi-line">User satisfaction : 46% → 84%</p>
+            <p class="case-study-kpi-line case-study-kpi-sub">Compared to the previous year</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-study-body">
+
+    <!-- The company -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">The company</h2>
+      <p class="case-study-lead">The R&D division of Michelin counts more than 6 000 engineers and scientists. They have very specific needs and work on tomorrow’s tire technologies, to achieve these state-of-the-art performances they need to have a solid scientific documentation management tool.</p>
+    </section> 
+
+    <!-- What was the problem? -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">What was the problem?</h2>
+      <p>Michelin R&D library database is not widely used, article upload is slow and complicated. Reading and bookmarking articles do not answer user needs. In this context, Michelin Scientists usually save articles on their computer, and even, when needed, send them via mail. To improve the use of the product, I made the hypothesis that a shorter, simplified upload workﬂow would solve those problems.</p>
+      <figure class="case-study-fig case-study-fig-big">
+        <img src="assets/eureka-modern-mockup.png" alt="Modern redesign concept of the scientific documentation management interface"/>
+        <figcaption>Modern redesign concept of the scientific documentation management interface</figcaption>
+      </figure>
+    </section>
+
+    <!-- The strategy I implemented -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">The strategy I implemented</h2>
+      <p>I was the sole UX designer within a team composed of a Product manager, a scrum master and 3 developers. I did the UX Research and the design for the new product. Those steps have been done in coordination with the various stakeholders.</p>
+    </section>
+
+    <!-- Activities -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Activities</h2>
+      <p>After several shadowing and interviews with users and stakeholders, I was able to identify the diﬀerent problems within the « current » product. The upload of scientiﬁc documents was not understood by users, there were too many options and speciﬁc ﬁelds. The document visualisation rules and possibilities were also too strict and clumsy, mostly because of security issues.</p>
+    </section>
+
+    <!-- Challenges -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Challenges</h2>
+      <p>The biggest challenge I faced was to ﬁnd a way to make every user, with their diﬀerent background (America, Asia, Europe), use the product eﬃciently. Usability testing done during the project allowed me to discard designs that were not usable for one or the other user type.</p>
+      <figure class="case-study-fig case-study-fig-big">
+        <img src="assets/Clip_path_group-1-e468472d-5fe6-4df2-afda-40866356c82a.png" alt="Eureka interface — My Library, Suggestions and document preview"/>
+        <figcaption>Wireframe used during usability testing</figcaption>
+      </figure>
+    </section>
+
+    <!-- Solution -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Solution</h2>
+      <p>After interviews and shadowing, I designed a new version for the product, which was based on Microsoft SharePoint. I did usability testing to be sure that the most important function of the product, document upload, would be usable. The change of worlkﬂow allowed user to do upload faster and also avoid them the hassle of searching and ﬁlling various ﬁelds by themselves. Once every MVP function was validated through usability testing I was able to deliver a product that was faster and more useful for users.</p>
+      <figure class="case-study-fig case-study-fig-big">
+        <img src="assets/eureka-modern-mockup.png" alt="Modern redesign concept of the scientific documentation management interface"/>
+        <figcaption>Modern redesign concept — how the interface could look with contemporary UI patterns</figcaption>
+      </figure>
+    </section>
+
+    <!-- Results and metrics -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Results and metrics</h2>
+      <p>Users saw in improvement of their tool both in speed and in reactivity, which allowed them to use the product without waiting for screens to load as they were used to. Document visualisation has also been improved which increased the use of the database.
+
+        The makeover led to an increase of 10% in scientiﬁc articles compared to the previous year.
+        
+        The user satisfaction increased from 46% to 84% in the same time.</p>
+      <figure class="case-study-fig case-study-fig-big">
+        <img src="assets/Group-1-07a84646-04fc-4916-a487-e1546ed23e07.png" alt="Final results in production at the end of 2018"/>
+        <figcaption>Final results in production at the end of 2018</figcaption>
+      </figure>
+    </section>
+
+    <!-- Take-away -->
+    <section class="case-study-block case-study-takeaway">
+      <h2 class="case-study-h2">Take-away</h2>
+      <p>This project taught me to conceive applications with high security constraints due to the conﬁdentiality and critical state of the documents they contain.
+
+        Working with several cultures and being able to satisfy them all has also been a great take-away.</p>
+    </section>
+
+    <!-- You may also like -->
+    <section class="case-study-also">
+      <h2 class="case-study-also-title">You may also like</h2>
+      <div class="case-study-also-grid">
+        <a href="case-study-aviv-listing-funnel.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/aviv-cover.png" alt="Listing creation funnel — Real Estate"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Real Estate · 2023–2024</p>
+            <h3 class="case-study-also-tile-title">Designing a seamless listing creation funnel</h3>
+          </div>
+        </a>
+        <a href="case-study-orange.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/orange-cover.png" alt="Orange B2B management tool — Telecom"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Telecom · 2021-2003</p>
+            <h3 class="case-study-also-tile-title">Bringing a B2B management tool to full maturity</h3>
+          </div>
+        </a>
+        <a href="case-study-michelin-3d-benchmark.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/michelin-cover-2.png" alt="3D design tool benchmark"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Engineering · 2019</p>
+            <h3 class="case-study-also-tile-title">3D design tool benchmark</h3>
+          </div>
+        </a>
+        <a href="case-study-michelin-agriculture.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/michelin-cover-3.png" alt="Agricultural advice app"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Agriculture / Sales · 2013/2019</p>
+            <h3 class="case-study-also-tile-title">After-sale agricultural advice app</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Back to work -->
+  <footer class="case-study-footer">
+    <a href="index.html#work" class="case-study-back">
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2.5L3.5 5H9v2H3.5L6 9.5"/></svg>
+      Back to case studies
+    </a>
+  </footer>
+
+</article>
+
+<!-- ── FOOTER ────────────────────────────────── -->
+<footer>
+  <span class="footer-left">© 2025 JB Schneider</span>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/jb_schneidr/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="mailto:hello@jbschneider.com">Email</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

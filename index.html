@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="JB Schneider – Product Designer, focused on B2B, based in Berlin"/>
+  <title>JB Schneider – Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('jb-portfolio-theme');
+        if (s === 'dark') document.documentElement.classList.add('dark-mode');
+        else if (s === 'light') document.documentElement.classList.add('theme-light');
+      } catch (_) {}
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────── -->
+<nav>
+  <a href="#" class="nav-logo">JB Schneider</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#work">Use-cases</a></li>
+      <li><a href="https://www.instagram.com/jb_schneidr/" target="_blank" rel="noopener noreferrer">Personal work</a></li>
+      <li><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+    </ul>
+    <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="theme-toggle__track">
+        <span class="theme-toggle__thumb"></span>
+      </span>
+      <span class="theme-toggle__icons" aria-hidden="true">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v1.5M12 19.5V21M4.22 4.22l1.06 1.06M18.72 18.72l1.06 1.06M3 12h1.5M19.5 12H21M4.22 19.78l1.06-1.06M18.72 5.28l1.06-1.06M12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────── -->
+<div class="section-wrap">
+  <div class="hero">
+    <div class="hero-left">
+      <h1 class="hero-title">
+        <span class="hero-title__line">JB Schneider is</span>
+        <span class="hero-title__line"><span>Senior Product Designer, <span class="hero-title__no-wrap">focused on B2B</span></span></span>
+        <span class="hero-title__line">based in Berlin</span>
+      </h1>
+
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/" class="social-icon" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.25 2.36 4.25 5.43v6.31h.02zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/jb_schneidr/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12c0-3.2.01-3.58.07-4.85C2.38 3.86 3.9 2.31 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95C23.73 2.71 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32A6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+        </a>
+      </div>
+
+      <p class="hero-tagline">8+ years of design</p>
+    </div>
+
+    <div class="hero-right">
+      <img class="hero-avatar hero-avatar--medium" src="assets/jb-headshot.png" alt="JB Schneider"/>
+    </div>
+  </div>
+</div>
+
+<!-- ── COMPANY LOGOS ─────────────────────────── -->
+<div class="logos-section">
+  <div class="logos-inner">
+    <span class="logos-label">Worked in</span>
+    <div class="logos-track">
+      <span class="logo-chip"><span class="dot"></span>Real Estate</span>
+      <span class="logo-chip"><span class="dot"></span>Telecom</span>
+      <span class="logo-chip"><span class="dot"></span>Agritech</span>
+      <span class="logo-chip"><span class="dot"></span>Engineering</span>
+      <span class="logo-chip"><span class="dot"></span>R&amp;D</span>
+      <span class="logo-chip"><span class="dot"></span>Accounting</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── HIGHLIGHTS ────────────────────────────── -->
+<div class="section-wrap highlights-section" id="highlights">
+  <div class="section-label">Highlights</div>
+
+  <div class="highlights-grid">
+
+    <div class="highlight-card reveal">
+      <div class="highlight-icon">🏆</div>
+      <div class="highlight-title">Design System Contributor</div>
+      <div class="highlight-desc">Built and contributed to a scalable design system used across multiple real estate portals, improving consistency and dev-handoff speed.</div>
+      <a href="#work" class="highlight-link">
+        See more
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+      </a>
+    </div>
+
+    <div class="highlight-card reveal">
+      <div class="highlight-icon">📱</div>
+      <div class="highlight-title">Mobile-first Telecom Product</div>
+      <div class="highlight-desc">Led discovery and redesigned international trip planning for a major telecom player, creating a mobile experience for millions of travellers.</div>
+      <a href="#work" class="highlight-link">
+        See more
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+      </a>
+    </div>
+
+    <div class="highlight-card reveal">
+      <div class="highlight-icon">🙋🏼‍♀️</div>
+      <div class="highlight-title">Mentoring younger designer</div>
+      <div class="highlight-desc">Mentored younger designer in different settings, to help them grow in their design practice.</div>
+      <a href="#work" class="highlight-link">
+        See more
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+      </a>
+    </div>
+
+    <div class="highlight-card reveal">
+      <div class="highlight-icon">🌾</div>
+      <div class="highlight-title">Mobile App — Agri-tech Sales Tool</div>
+      <div class="highlight-desc">Built a brand-new mobile app for field sales reps replacing a critical Excel-based legacy system, improving usability drastically for daily operations.</div>
+      <a href="#work" class="highlight-link">
+        See more
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+      </a>
+    </div>
+
+    <div class="highlight-card reveal">
+      <div class="highlight-icon">⚙️</div>
+      <div class="highlight-title">UX Research — 3D Engineering Tools</div>
+      <div class="highlight-desc">Partnered with engineers and 3D teams to benchmark industry design tools, synthesising usability findings into actionable product improvements.</div>
+      <a href="#work" class="highlight-link">
+        See more
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+      </a>
+    </div>
+
+    <div class="highlight-card reveal">
+      <div class="highlight-icon">🌍</div>
+      <div class="highlight-title">Multi-industry Experience</div>
+      <div class="highlight-desc">8+ years designing across real estate, telecom, automotive R&D, and agri-tech — bringing cross-domain perspective to every project.</div>
+      <a href="#contact" class="highlight-link">
+        Get in touch
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── WORK ──────────────────────────────────── -->
+<div class="work-section" id="work">
+  <div class="section-wrap" style="padding-bottom: 0;">
+    <div class="section-label">Use-cases</div>
+  </div>
+
+  <div class="work-outer">
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-group">
+        <div class="toc-item active" data-card="card-1">
+Listing Creation Funnel
+        </div>
+        <div class="toc-item" data-card="card-2">
+Bringing a B2B management tool to full maturity
+        </div>
+        <div class="toc-item" data-card="card-3">
+3D Design Benchmark
+        </div>
+        <div class="toc-item" data-card="card-4">
+R&amp;D Library Management
+        </div>
+        <div class="toc-item" data-card="card-5">
+Agricultural Advice App
+        </div>
+      </div>
+    </nav>
+
+    <div class="work-main">
+      <div class="projects-list">
+
+      <a class="project-card reveal" id="card-1" href="case-study-aviv-listing-funnel.html">
+        <div class="project-info">
+          <div class="project-type">Case Study · 2023-2024</div>
+          <div class="project-company">Real Estate</div>
+          <h3 class="project-title">Designing a seamless listing creation funnel</h3>
+          <p class="project-desc">I built a White Label version of a property listing funnel for a major real estate portal, adding state-of-the-art features while contributing to the company design system.</p>
+          <div class="project-footer">
+            <span class="project-cta">
+              Case Study
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+            </span>
+            <span class="project-badge">Design System</span>
+          </div>
+        </div>
+        <div class="project-visual v-real-estate">
+          <img src="assets/Aviv_thumbnail_V2-602e47c1-2ef5-47f9-98f8-c3da62373234.png" alt="New listing creation funnel — Aviv Group" class="project-visual__img"/>
+          <span class="visual-number">01</span>
+          <div class="project-visual__overlay" aria-hidden="true"></div>
+        </div>
+      </a>
+
+      <a class="project-card reveal" id="card-2" href="case-study-orange.html">
+        <div class="project-info">
+          <div class="project-type">Case Study · 2021-2023</div>
+          <div class="project-company">Telecom</div>
+          <h3 class="project-title">Bringing a B2B management tool to full maturity</h3>
+          <p class="project-desc">Updated and ran discovery on the best next features to implement for international travel planning, then created a mobile-first version for critical use cases.</p>
+          <div class="project-footer">
+            <span class="project-cta">
+              Case Study
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+            </span>
+            <span class="project-badge">Mobile</span>
+          </div>
+        </div>
+        <div class="project-visual v-telecom">
+          <img src="assets/Orange_thumbnail_V2-48f6eedc-0d47-44ab-a450-f41d3045369e.png" alt="Bringing a B2B management tool to full maturity — Orange" class="project-visual__img"/>
+          <span class="visual-number">02</span>
+          <div class="project-visual__overlay" aria-hidden="true"></div>
+        </div>
+      </a>
+
+      <a class="project-card reveal" id="card-3" href="case-study-michelin-3d-benchmark.html">
+        <div class="project-info">
+          <div class="project-type">Case Study · 2019</div>
+          <div class="project-company">Engineering</div>
+          <h3 class="project-title">3D design tool benchmark</h3>
+          <p class="project-desc">Worked with engineers and 3D design teams to benchmark their product so users have the best possible experience in their day-to-day activities.</p>
+          <div class="project-footer">
+            <span class="project-cta">
+              Case Study
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+            </span>
+            <span class="project-badge">UX Research</span>
+          </div>
+        </div>
+        <div class="project-visual v-engineering">
+          <img src="assets/Michelin_thumbnail_benchmark_V2-7ce4e9e1-ea14-496e-a5dc-fee58641b058.png" alt="Benchmark 3D design tool — Michelin" class="project-visual__img"/>
+          <span class="visual-number">03</span>
+          <div class="project-visual__overlay" aria-hidden="true"></div>
+        </div>
+      </a>
+
+      <a class="project-card reveal" id="card-4" href="case-study-michelin-rd-library.html">
+        <div class="project-info">
+          <div class="project-type">Case Study · 2018</div>
+          <div class="project-company">Michelin R&amp;D</div>
+          <h3 class="project-title">R&amp;D library management system</h3>
+          <p class="project-desc">Created a new version of a scientific articles management library for Michelin R&amp;D teams, replacing an outdated and insecure legacy product.</p>
+          <div class="project-footer">
+            <span class="project-cta">
+              Case Study
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+            </span>
+            <span class="project-badge">Enterprise</span>
+          </div>
+        </div>
+        <div class="project-visual v-rd">
+          <img src="assets/Michelin_thumbnail_R_D_V2-4dd6e7e5-4dd5-458b-93dc-4b79fe21771e.png" alt="Create scientific management tool — Michelin R&D" class="project-visual__img"/>
+          <span class="visual-number">04</span>
+          <div class="project-visual__overlay" aria-hidden="true"></div>
+        </div>
+      </a>
+
+      <a class="project-card reveal" id="card-5" href="case-study-michelin-agriculture.html">
+        <div class="project-info">
+          <div class="project-type">Case Study · 2013/2019</div>
+          <div class="project-company">Agriculture / Sales</div>
+          <h3 class="project-title">After-sale agricultural advice app</h3>
+          <p class="project-desc">Created a brand-new mobile app for sales people, replacing a legacy Excel-like website that had critical usability and security issues.</p>
+          <div class="project-footer">
+            <span class="project-cta">
+              Case Study
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+            </span>
+            <span class="project-badge">Mobile App</span>
+          </div>
+        </div>
+        <div class="project-visual v-agri">
+          <img src="assets/Michelin_thumbnail_app_V2-7d8faea7-383e-47b7-8dde-8ccb3c32017f.png" alt="Mobile app for Sales — Michelin Agriculture" class="project-visual__img"/>
+          <span class="visual-number">05</span>
+          <div class="project-visual__overlay" aria-hidden="true"></div>
+        </div>
+      </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CONTACT ───────────────────────────────── -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner reveal">
+    <h2 class="contact-title">Want to get in touch?<br/>Drop me a line</h2>
+    <p class="contact-sub">I'm always happy to hear about new opportunities, collaborations, or just to chat about design.</p>
+    <form class="contact-form" id="contact-form">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name"/>
+      </div>
+      <div class="form-field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com"/>
+      </div>
+      <div class="form-field">
+        <label for="msg">Message</label>
+        <textarea id="msg" name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+      </div>
+      <button class="form-btn" type="submit">
+        Send message
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ── FOOTER ────────────────────────────────── -->
+<footer>
+  <span class="footer-left">© 2025 JB Schneider</span>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/jb_schneidr/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://uxjbschneider.myportfolio.com/resume" target="_blank" rel="noopener noreferrer">Resume</a>
+    <a href="mailto:hello@jbschneider.com">Email</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

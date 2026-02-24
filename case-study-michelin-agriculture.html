@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Case study: Create a mobile app to replace a legacy Excel like website — Michelin Agriculture"/>
+  <title>After-sale agricultural advice app — Michelin · JB Schneider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="case-study.css"/>
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('jb-portfolio-theme');
+        if (s === 'dark') document.documentElement.classList.add('dark-mode');
+        else if (s === 'light') document.documentElement.classList.add('theme-light');
+      } catch (_) {}
+    })();
+  </script>
+</head>
+<body class="case-study-page">
+
+<!-- ── NAV ──────────────────────────────────── -->
+<nav>
+  <a href="index.html" class="nav-logo">JB Schneider</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html#work">Use-cases</a></li>
+      <li><a href="https://www.instagram.com/jb_schneidr/" target="_blank" rel="noopener noreferrer">Personal work</a></li>
+      <li><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Get in touch</a></li>
+    </ul>
+    <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="theme-toggle__track">
+        <span class="theme-toggle__thumb"></span>
+      </span>
+      <span class="theme-toggle__icons" aria-hidden="true">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v1.5M12 19.5V21M4.22 4.22l1.06 1.06M18.72 18.72l1.06 1.06M3 12h1.5M19.5 12H21M4.22 19.78l1.06-1.06M18.72 5.28l1.06-1.06M12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </span>
+    </button>
+  </div>
+</nav>
+
+<article class="case-study">
+
+  <!-- Hero -->
+  <header class="case-study-hero">
+    <div class="case-study-hero-inner">
+      <p class="case-study-meta">Michelin · 2013/2019</p>
+      <h1 class="case-study-title">Create a mobile app to replace a legacy Excel like website</h1>
+      <div class="case-study-kpi-tile">
+        <h3 class="case-study-kpi-title">Results</h3>
+        <div class="case-study-kpi-grid">
+          <div class="case-study-kpi-col">
+            <p class="case-study-kpi-line">+40% speed on main tasks</p>
+            <p class="case-study-kpi-line case-study-kpi-sub">On the new version of the application</p>
+          </div>
+          <div class="case-study-kpi-col">
+            <p class="case-study-kpi-line">Mobile first</p>
+            <p class="case-study-kpi-line case-study-kpi-sub">No laptop needed on-site; more professional presence</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-study-body">
+
+    <!-- Split: The company + next sections with Agropro image on the right -->
+    <div class="case-study-split">
+      <div class="case-study-split-text">
+        <!-- The company -->
+        <section class="case-study-block">
+          <h2 class="case-study-h2">The company</h2>
+          <p class="case-study-lead">Michelin has multiple business lines including agricultural tires. Farmers have specific needs and Michelin is trying to give them the best service they can even after buying the tires.</p>
+        </section>
+
+        <!-- What was the problem? -->
+        <section class="case-study-block">
+          <h2 class="case-study-h2">What was the problem?</h2>
+          <p>Michelin Salespeople perform after-sales advice to farmers right on the field. To perform those pieces of advice they use laptops connected to the internet via their phone connection sharing. I made the hypothesis that the new version of their tool should be mobile-ﬁrst to enhance their work on-site and be seen as more professional by farmers as well as users.</p>
+        </section>
+
+        <!-- The strategy I implemented -->
+        <section class="case-study-block">
+          <h2 class="case-study-h2">The strategy I implemented</h2>
+          <p>I worked with the product manager to define the different user profiles to work with on this project. After this definition phase, I organised in-person meetings all around France to see firsthand how they were working. I did shadowing followed by interviews with the panel. After this research phase I started designing in an iterative way to obtain the best possible solution for users. Once the User Experience Design was done, we outsourced the development of the website to a company which I had to work with to make sure the website would be as good as possible for users, on mobile as well as on laptops.</p>
+        </section>
+      </div>
+      <figure class="case-study-split-fig case-study-split-fig--no-border case-study-split-fig--static" aria-hidden="true">
+        <img src="assets/Mockup-agropro-1_1-96a63eef-d323-4b4a-93f4-31d4ac4de66f.png" alt="Agropro mobile app — homepage with Tracteur, Manutention, Batteuse, Ensileuse"/>
+      </figure>
+    </div>
+
+    <!-- Activities -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Activities</h2>
+      <p>On-site observations, shadowing and interviews allowed me to witness that the devices used by the salespeople were not adapted to their use. Using a smartphone would be much easier for them, and would avoid the need to connect the laptop to a smartphone to have an internet connection.</p>
+      <div class="case-study-gallery case-study-gallery--390">
+        <figure class="case-study-fig case-study-fig-big">
+          <img src="assets/2-c886f412-cd6e-46ef-a894-a08d551c78e5.png" alt="Agropro — Tracteur, Manutention, Batteuse, Ensileuse"/>
+        </figure>
+        <figure class="case-study-fig case-study-fig-big">
+          <img src="assets/3-16085a4c-8699-498c-bc5f-193b297344ff.png" alt="Entrer le modèle du tracteur — tractor model form"/>
+        </figure>
+        <figure class="case-study-fig case-study-fig-big case-study-fig-wide">
+          <img src="assets/4-46b9cc53-318c-4cf5-b0cc-0268e1134a17.png" alt="Agropro — Tracteur, Manutention, Batteuse, Ensilense"/>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Challenges -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Challenges</h2>
+      <p>During the Research and ideation phase the product owner was really focused on doing a desktop-based website. I had to push and make him understand that the real life use was not adapted to the environment of the users. The other challenge was a logistical one, scheduling all the shadowing and interviews throughout France with each person’s own schedule.</p>
+    </section>
+
+    <!-- Solution -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Solution</h2>
+      <p>Basing the new version on a Mobile-ﬁrst design resolved problems related to the transport and use of their laptop by eliminating them. The new version of the website is focused on the main tasks users perform, which enabled an improvement both in efficiency and in speed of their main tasks. Once the user experience design was validated I outsourced the user interface design to a freelancet to make the website compliant with Michelin Design System and then to another company for development.</p>
+    </section>
+
+    <!-- Results and metrics -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Results and metrics</h2>
+      <p>The new version of the website allowed users to avoid having to carry their laptop all the time to their clients’ appointments. For the website part the new version showed a 30% increase in speed for the main tasks of the application.
+
+        Finally the main feedback we got is that the farmers, as well as the salespeople, felt that this new tool make them look more professional and more modern than the previous version.</p>
+    </section>
+
+    <!-- Take-away -->
+    <section class="case-study-block case-study-takeaway">
+      <h2 class="case-study-h2">Take-away</h2>
+      <p>This project taught me to do the ideation and research phases with users disseminated all around France, and conduct user testing remotely. Working on a website that is meant to be used in the field rather than in an office has also been really motivating.</p>
+    </section>
+
+    <!-- You may also like -->
+    <section class="case-study-also">
+      <h2 class="case-study-also-title">You may also like</h2>
+      <div class="case-study-also-grid">
+        <a href="case-study-aviv-listing-funnel.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/aviv-cover.png" alt="Listing creation funnel — Real Estate"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Real Estate · 2023-2024</p>
+            <h3 class="case-study-also-tile-title">Designing a seamless listing creation funnel</h3>
+          </div>
+        </a>
+        <a href="case-study-orange.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/orange-cover.png" alt="Orange B2B management tool — Telecom"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Telecom · 2021-2003</p>
+            <h3 class="case-study-also-tile-title">Bringing a B2B management tool to full maturity</h3>
+          </div>
+        </a>
+        <a href="case-study-michelin-3d-benchmark.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/michelin-cover-2.png" alt="3D design tool benchmark"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Engineering · 2019</p>
+            <h3 class="case-study-also-tile-title">3D design tool benchmark</h3>
+          </div>
+        </a>
+        <a href="case-study-michelin-rd-library.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/michelin-cover-1.png" alt="R&D library management — Michelin"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Michelin R&D · 2018</p>
+            <h3 class="case-study-also-tile-title">R&D library management system</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Back to work -->
+  <footer class="case-study-footer">
+    <a href="index.html#work" class="case-study-back">
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2.5L3.5 5H9v2H3.5L6 9.5"/></svg>
+      Back to case studies
+    </a>
+  </footer>
+
+</article>
+
+<!-- ── FOOTER ────────────────────────────────── -->
+<footer>
+  <span class="footer-left">© 2025 JB Schneider</span>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/jb_schneidr/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="mailto:hello@jbschneider.com">Email</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

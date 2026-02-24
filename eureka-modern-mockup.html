@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eureka — Modern Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sidebar-bg: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      --sidebar-hover: rgba(255,255,255,0.08);
+      --accent: #6366f1;
+      --accent-soft: rgba(99, 102, 241, 0.15);
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+      --text-primary: #0f172a;
+      --text-secondary: #64748b;
+      --text-muted: #94a3b8;
+      --border: #e2e8f0;
+      --bg-main: #f8fafc;
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-primary);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .app {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      gap: 24px;
+      z-index: 100;
+    }
+    .header-menu {
+      width: 20px;
+      height: 20px;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+    .header-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+    .header-search {
+      flex: 1;
+      max-width: 400px;
+      height: 40px;
+      padding: 0 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      background: var(--bg-main);
+      color: var(--text-primary);
+    }
+    .header-search::placeholder { color: var(--text-muted); }
+    .header-badge {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      min-height: 100vh;
+      background: var(--sidebar-bg);
+      padding: 72px 16px 24px;
+      flex-shrink: 0;
+    }
+    .sidebar-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      height: 44px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+    }
+    .sidebar-section {
+      margin-bottom: 28px;
+    }
+    .sidebar-section-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      padding: 0 12px;
+    }
+    .sidebar-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .sidebar-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 12px;
+      background: rgba(255,255,255,0.06);
+      border-radius: var(--radius-sm);
+      color: white;
+      font-size: 12px;
+      font-weight: 500;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .sidebar-item:hover {
+      background: var(--sidebar-hover);
+    }
+    .sidebar-item svg {
+      width: 24px;
+      height: 24px;
+      opacity: 0.9;
+    }
+    .sidebar-item-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .sidebar-item-row .sidebar-item {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 12px 16px;
+    }
+    .sidebar-item-row .sidebar-item svg {
+      width: 20px;
+      height: 20px;
+    }
+    .sidebar-personal {
+      margin-top: 8px;
+    }
+    .personal-card {
+      background: rgba(255,255,255,0.06);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      display: flex;
+      gap: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .personal-card:hover {
+      background: var(--sidebar-hover);
+    }
+    .personal-thumb {
+      width: 48px;
+      height: 64px;
+      background: linear-gradient(145deg, #334155, #1e293b);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      flex-shrink: 0;
+    }
+    .personal-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .personal-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .personal-meta {
+      font-size: 10px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .personal-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+    }
+    .personal-nav button {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 72px 32px 32px;
+      margin-left: 0;
+    }
+    .main-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .suggestions-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 24px;
+    }
+    .doc-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .doc-card:hover {
+      box-shadow: var(--card-shadow-hover);
+    }
+    .doc-preview {
+      padding: 20px 24px;
+      min-height: 280px;
+    }
+    .doc-preview-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .doc-logo {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: 0.08em;
+    }
+    .doc-content {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .doc-content p {
+      margin-bottom: 12px;
+    }
+    .doc-schema {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .doc-schema-box {
+      height: 48px;
+      background: var(--bg-main);
+      border: 1px dashed var(--border);
+      border-radius: 6px;
+    }
+    .doc-tires {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+      justify-content: center;
+    }
+    .doc-tire {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(180deg, #475569 0%, #334155 100%);
+      border-radius: 50%;
+      position: relative;
+    }
+    .doc-tire::after {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+    }
+    .doc-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+    }
+    .doc-title {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .doc-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .abstract-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .abstract-card p {
+      margin-bottom: 12px;
+    }
+    .abstract-card p:last-child {
+      margin-bottom: 0;
+    }
+    .carousel-arrows {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .carousel-arrows button {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+    }
+    .carousel-arrows button:hover {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Dark mode — system and explicit */
+    @media (prefers-color-scheme: dark) {
+      html:not(.theme-light) {
+        --card-bg: #111114;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.4);
+        --text-primary: #e8e8ea;
+        --text-secondary: #a0a0a8;
+        --text-muted: #707078;
+        --border: rgba(255,255,255,0.12);
+        --bg-main: #0c0c0e;
+      }
+    }
+    html.dark-mode {
+      --card-bg: #111114;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.4);
+      --text-primary: #e8e8ea;
+      --text-secondary: #a0a0a8;
+      --text-muted: #707078;
+      --border: rgba(255,255,255,0.12);
+      --bg-main: #0c0c0e;
+    }
+
+    .header-toggle-wrap { margin-left: auto; }
+    .theme-toggle {
+      --toggle-w: 44px;
+      --toggle-h: 24px;
+      --thumb: 18px;
+      width: var(--toggle-w);
+      height: var(--toggle-h);
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 0;
+      position: relative;
+      border-radius: 100px;
+    }
+    .theme-toggle__track {
+      position: absolute;
+      inset: 0;
+      background: #e2e8f0;
+      border-radius: 100px;
+    }
+    .theme-toggle__thumb {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: var(--thumb);
+      height: var(--thumb);
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    @media (prefers-color-scheme: dark) {
+      html:not(.theme-light) .theme-toggle__track { background: rgba(255,255,255,0.2); }
+    }
+    html.dark-mode .theme-toggle__track { background: rgba(255,255,255,0.2); }
+    .theme-toggle[aria-pressed="true"] .theme-toggle__thumb {
+      transform: translateX(calc(var(--toggle-w) - var(--thumb) - 6px));
+    }
+    .theme-toggle__icons {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6px;
+    }
+    .theme-toggle__icons svg { width: 12px; height: 12px; color: var(--text-muted); }
+    .theme-toggle__sun { opacity: 1; }
+    .theme-toggle__moon { opacity: 0.4; }
+    .theme-toggle[aria-pressed="true"] .theme-toggle__sun { opacity: 0.4; }
+    .theme-toggle[aria-pressed="true"] .theme-toggle__moon { opacity: 1; color: #e8e8ea; }
+  </style>
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('jb-portfolio-theme');
+        if (s === 'dark') document.documentElement.classList.add('dark-mode');
+        else if (s === 'light') document.documentElement.classList.add('theme-light');
+      } catch (_) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <svg class="header-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <span class="header-logo">Eureka</span>
+      <input class="header-search" type="search" placeholder="Search documents, notices, wikis…"/>
+      <span class="header-badge">4 D3 left today</span>
+      <div class="header-toggle-wrap">
+        <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <span class="theme-toggle__track">
+            <span class="theme-toggle__thumb"></span>
+          </span>
+          <span class="theme-toggle__icons" aria-hidden="true">
+            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v1.5M12 19.5V21M4.22 4.22l1.06 1.06M18.72 18.72l1.06 1.06M3 12h1.5M19.5 12H21M4.22 19.78l1.06-1.06M18.72 5.28l1.06-1.06M12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z"/></svg>
+            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <button class="sidebar-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
+        Create a Notice
+      </button>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">My Library</div>
+        <div class="sidebar-grid">
+          <div class="sidebar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              <path d="M8 7h8"/>
+              <path d="M8 11h8"/>
+            </svg>
+            Library
+          </div>
+          <div class="sidebar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Pending Notices
+          </div>
+          <div class="sidebar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+              <polyline points="17 21 17 13 7 13 7 21"/>
+              <polyline points="7 3 7 8 15 8"/>
+            </svg>
+            Saved Search
+          </div>
+          <div class="sidebar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            Published Notices
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Actions</div>
+        <div class="sidebar-item-row">
+          <div class="sidebar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 11l3 3L22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+            <span>2 pending tasks</span>
+          </div>
+          <div class="sidebar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+            <span>Create a Wiki</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section sidebar-personal">
+        <div class="sidebar-section-title">Personalised content</div>
+        <div class="personal-card">
+          <div class="personal-thumb">Science</div>
+          <div class="personal-info">
+            <div class="personal-title">Will AI rule the world?</div>
+            <div class="personal-meta">Gerard Menvuca · 15/11/2018<br/>CIDOF - CEDOC</div>
+          </div>
+        </div>
+        <div class="personal-nav">
+          <button aria-label="Previous">←</button>
+          <button aria-label="Next">→</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1 class="main-title">Suggestions</h1>
+      <div class="suggestions-grid">
+        <div class="doc-card">
+          <div class="doc-preview">
+            <div class="doc-preview-header">
+              <span class="doc-logo">MICHELIN</span>
+            </div>
+            <div class="doc-content">
+              <p>Technical specification document — Balise Primacy 4.5 ST B1-B2 Loop2 mold design.</p>
+              <div class="doc-schema">
+                <div class="doc-schema-box"></div>
+                <div class="doc-schema-box"></div>
+                <div class="doc-schema-box"></div>
+              </div>
+              <div class="doc-tires">
+                <div class="doc-tire"></div>
+                <div class="doc-tire"></div>
+                <div class="doc-tire"></div>
+              </div>
+            </div>
+          </div>
+          <div class="doc-footer">
+            <div class="doc-title">Balise Primacy 4.5 ST B1-B2 Loop2 mold design</div>
+            <div class="doc-meta">Gerard Menvuca · 15/11/2018 · CIDOF-CEDOC</div>
+          </div>
+          <div class="carousel-arrows">
+            <button aria-label="Previous">←</button>
+            <button aria-label="Next">→</button>
+          </div>
+        </div>
+        <div class="abstract-card">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

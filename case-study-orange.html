@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Case study: Bringing a B2B management tool to full maturity — Orange"/>
+  <title>Bringing a B2B management tool to full maturity — Orange · JB Schneider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="case-study.css"/>
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('jb-portfolio-theme');
+        if (s === 'dark') document.documentElement.classList.add('dark-mode');
+        else if (s === 'light') document.documentElement.classList.add('theme-light');
+      } catch (_) {}
+    })();
+  </script>
+</head>
+<body class="case-study-page">
+
+<!-- ── NAV ──────────────────────────────────── -->
+<nav>
+  <a href="index.html" class="nav-logo">JB Schneider</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html#work">Use-cases</a></li>
+      <li><a href="https://www.instagram.com/jb_schneidr/" target="_blank" rel="noopener noreferrer">Personal work</a></li>
+      <li><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Get in touch</a></li>
+    </ul>
+    <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="theme-toggle__track">
+        <span class="theme-toggle__thumb"></span>
+      </span>
+      <span class="theme-toggle__icons" aria-hidden="true">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v1.5M12 19.5V21M4.22 4.22l1.06 1.06M18.72 18.72l1.06 1.06M3 12h1.5M19.5 12H21M4.22 19.78l1.06-1.06M18.72 5.28l1.06-1.06M12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </span>
+    </button>
+  </div>
+</nav>
+
+<article class="case-study">
+
+  <!-- Hero -->
+  <header class="case-study-hero">
+    <div class="case-study-hero-inner">
+      <p class="case-study-meta">Orange · 2021-2023</p>
+      <h1 class="case-study-title">Bringing a B2B management tool to full maturity</h1>
+      <div class="case-study-kpi-tile">
+        <h3 class="case-study-kpi-title">Results and metrics</h3>
+        <div class="case-study-kpi-grid">
+          <div class="case-study-kpi-col">
+            <p class="case-study-kpi-line">NPS score from 7.5 to 8.3</p>
+          </div>
+          <div class="case-study-kpi-col">
+            <p class="case-study-kpi-line">From ~500,000 more than 600 000 clients</p>
+            <p class="case-study-kpi-line case-study-kpi-sub">Total clients in France over 2 years</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-study-body">
+
+    <!-- Visual: GLM dashboard -->
+    <section class="case-study-block">
+      <figure class="case-study-fig case-study-fig-big case-study-fig-wide">
+        <img src="assets/orange-glm-dashboard.png" alt="Orange B2B mobile line management dashboard — Gestion de lignes mobiles with status overview, metrics and line table"/>
+      </figure>
+    </section>
+
+    <!-- The company -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">The company</h2>
+      <p class="case-study-lead">Orange is the biggest French telecom provider, the B2B division has clients ranging from one mobile line to more than 50 000 for clients such as Airbus or LVMH. The product I worked on is designed to help all these clients with their various needs to be able to manage their mobile lines efficiently and by themselves.</p>
+    </section>
+
+    <!-- What was the problem? -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">What was the problem?</h2>
+      <p>When I joined the product was already released but not mature it terms of feature set. My goal was to create a mature product that user would be able to use all by themselves without having to rely on calling the customer service.</p>
+      <figure class="case-study-fig case-study-fig-big case-study-fig-wide">
+        <img src="assets/orange-survey-results.png" alt="Survey results: top 5 actions users wanted on the mobile version of Gestion Lignes Mobiles — PUK code, consumption tracking, SIM change, suspend line, manage options"/>
+        <figcaption>Survey asking users for their top 5 actions to prioritise on the upcoming mobile version (103 responses)</figcaption>
+      </figure>
+    </section>
+
+    <!-- The strategy I implemented -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">The strategy I implemented</h2>
+      <p>This product which is dedicated to Mobile line management, used by over 600 000 B2B clients in France. I am the product Designer for this product and I worked with my Product Manager, Product Owner and engineering team to better understand the current workﬂows and features to be able to improve them over the course of 2 years. This understanding, along with data analytics allowed me to propose a new features, small or big that will help users get their needs met. I also designed a mobile version to provide critical features to clients to be able to access them from anywhere in the world.</p>
+      <figure class="case-study-fig case-study-fig-big case-study-fig-wide">
+        <img src="assets/orange-trip-workflow.png" alt="Unified journey for preparing travel abroad — flow for countries included or not in the package, voice and data options"/>
+        <figcaption>Unified journey for preparing travel abroad: flow by package inclusion and voice/data options</figcaption>
+      </figure>
+    </section>
+
+    <!-- Activities -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Activities</h2>
+      <p>I was leading research, managing focus groups with clients to discover their goals, doing usability testing to validate the screens created from hypothesis, using data analytics to inform choices for future changes or additions of features. I also worked hand-in-hand with other product teams and designer to make sure that our product would run smoothly within the ecosystem that user are using everyday. Being able to do all type of activities from research, all the way to delivery on a daily basis is exciting since the feedback and ideas that I write down during interviews are then being designed and tested by me, to finally be released and tracked to analyse their lifecycle.</p>
+      <div class="case-study-gallery">
+        <figure class="case-study-fig">
+          <img src="assets/orange-mobile-home.png" alt="Gestion Lignes Mobiles mobile home — search for a line, recent searches"/>
+          <figcaption>GLM mobile home: search and recent lines</figcaption>
+        </figure>
+        <figure class="case-study-fig">
+          <img src="assets/orange-mobile-line-detail.png" alt="Mobile line detail — active line, suspend, PUK code, activate SIM"/>
+          <figcaption>Line detail: status and key actions</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Solution</h2>
+      <p>Over the course of 2 years I implemented more than 80 features, some to improve an existing function, some completely from scratch, like the mobile version of the product, in order to make GLM the best B2B mobile management tool on the market (won 2024 best digital experience award from CX Circle). Providing users with a tool that they can confidently use when they need it, support their missions within their own company and that can evolve in the future with the evolutions of their needs and the technologies was the goal that I aimed at.</p>
+      <figure class="case-study-fig case-study-fig-big case-study-fig-wide">
+        <img src="assets/orange-solution-fleet.png" alt="Gestion de lignes mobiles — fleet overview, line status donut chart, hierarchical account and entity tree with line list"/>
+        <figcaption>Fleet management: overview, status breakdown and hierarchical account view (Votre Parc)</figcaption>
+      </figure>
+    </section>
+
+    <!-- Challenges -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Challenges</h2>
+      <p>The biggest challenge I face was to design meaningful features that supports user in their tasks. To achieve that, communication within the team was key. Having good relationship, and a lot of communication with PM, PO, EM and engineers really helped in facing timelines and tech issues together, to deliver features in a timely manner.</p>
+    </section>
+
+    <!-- Results and metrics -->
+    <section class="case-study-block">
+      <h2 class="case-study-h2">Results and metrics</h2>
+      <p>The main KPIs we tracked from the business point of view was the NPS and the total number of clients. When I join the NPS was 7.5 and 8.3 after 2 years. Regarding the total number of B2B clients, we went from around 500 000 to more than 600 000 after two years and increasing. It was thrilling to be part of such a team and to see it thrive this way.</p>
+      <figure class="case-study-fig case-study-fig-big case-study-fig-wide">
+        <img src="assets/orange-results-metrics.png" alt="Gestion Lignes Mobiles dashboard — KPIs, line status donut chart, status cards, search and export, fleet table"/>
+        <figcaption>Clickrate for the homepage main elements</figcaption>
+      </figure>
+    </section>
+
+    <!-- Take-away -->
+    <section class="case-study-block case-study-takeaway">
+      <h2 class="case-study-h2">Take-away</h2>
+      <p>This project taught me a great deal about communication within a big organisation. I also learned how to manage expectations from people in different teams, with different goals in order to deliver the best possible product to my users. I also started mentoring and leading my own initiatives which is a very positive point to look back on and that I’ll be able to use in my future projects.</p>
+    </section>
+
+    <!-- You may also like -->
+    <section class="case-study-also">
+      <h2 class="case-study-also-title">You may also like</h2>
+      <div class="case-study-also-grid">
+        <a href="case-study-aviv-listing-funnel.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/aviv-cover.png" alt="Listing creation funnel — Real Estate"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Real Estate · 2023-2024</p>
+            <h3 class="case-study-also-tile-title">Designing a seamless listing creation funnel</h3>
+          </div>
+        </a>
+        <a href="case-study-michelin-3d-benchmark.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/michelin-cover-2.png" alt="3D design tool benchmark"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Engineering · 2019</p>
+            <h3 class="case-study-also-tile-title">3D design tool benchmark</h3>
+          </div>
+        </a>
+        <a href="case-study-michelin-rd-library.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/michelin-cover-1.png" alt="R&D library management — Michelin"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Michelin R&D · 2018</p>
+            <h3 class="case-study-also-tile-title">R&D library management system</h3>
+          </div>
+        </a>
+        <a href="case-study-michelin-agriculture.html" class="case-study-also-tile">
+          <div class="case-study-also-tile-img-wrap">
+            <img src="assets/michelin-cover-3.png" alt="Agricultural advice app"/>
+          </div>
+          <div class="case-study-also-tile-content">
+            <p class="case-study-also-tile-meta">Agriculture / Sales · 2013/2019</p>
+            <h3 class="case-study-also-tile-title">After-sale agricultural advice app</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Back to work -->
+  <footer class="case-study-footer">
+    <a href="index.html#work" class="case-study-back">
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2.5L3.5 5H9v2H3.5L6 9.5"/></svg>
+      Back to case studies
+    </a>
+  </footer>
+
+</article>
+
+<!-- ── FOOTER ────────────────────────────────── -->
+<footer>
+  <span class="footer-left">© 2025 JB Schneider</span>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/jb_schneidr/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://uxjbschneider.myportfolio.com/resume" target="_blank" rel="noopener noreferrer">Resume</a>
+    <a href="mailto:hello@jbschneider.com">Email</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
