@@ -17,7 +17,7 @@ fi
 
 set -e
 REMOTE="https://github.com/${USER}/${REPO}.git"
-if git remote get-url origin 2>/dev/null; then
+if git remote | grep -q '^origin$'; then
   git remote set-url origin "$REMOTE"
 else
   git remote add origin "$REMOTE"
