@@ -57,6 +57,25 @@ if (themeToggle) {
   }
 }
 
+// Mobile hamburger menu toggle
+const navHamburger = document.querySelector('.nav-hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (navHamburger && navLinks) {
+  navHamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navHamburger.classList.toggle('open', isOpen);
+    navHamburger.setAttribute('aria-expanded', isOpen);
+  });
+  // Close menu when a link is tapped
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navHamburger.classList.remove('open');
+      navHamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
 // Case study: landing effect on load
 const caseStudy = document.querySelector('.case-study');
 if (caseStudy) {
