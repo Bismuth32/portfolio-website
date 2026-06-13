@@ -136,6 +136,26 @@
   display: block;
 }
 
+/* Classified funnel live prototype shell (same footprint as big figures) */
+.classified-funnel-shell {
+  width: 100%;
+  height: 580px;
+  border-radius: var(--radius);
+  border: 1px solid var(--grey-4);
+  overflow: hidden;
+  background: #f0f0f0;
+  position: relative;
+}
+
+.classified-funnel-shell-inner {
+  position: absolute;
+  inset: 0;
+  transform-origin: top left;
+  transform: scale(0.6);
+  width: calc(100% / 0.6);
+  height: calc(100% / 0.6);
+}
+
 /* Michelin benchmark: container sizes to image, centered */
 .case-study--benchmark .case-study-fig-big {
   width: max-content;

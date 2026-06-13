@@ -59,7 +59,7 @@
             <p class="case-study-kpi-line case-study-kpi-sub">From an average of 45min to less than 30min</p>
           </div>
           <div class="case-study-kpi-col">
-            <p class="case-study-kpi-line">Pragmatic value of UEQS at 2.54</p>
+            <p class="case-study-kpi-line">Pragmatic value of UEQS at 2.25</p>
             <p class="case-study-kpi-line case-study-kpi-sub">Hedonic value of UEQS at 0.694</p>
           </div>
         </div>
@@ -81,13 +81,19 @@
     <!-- The strategy I implemented -->
     <section class="case-study-block">
       <h2 class="case-study-h2">The strategy I implemented</h2>
-      <p>To drive cross-country synergy and improve the efficiency of product development, the Aviv group decided to merge multiple listing funnels (SeLoger, Immobilienscout24, Immoweb) into a single unified solution. My role was to lead the design efforts for the first market (France), ensuring the solution was scalable to other countries. This involved collaborating with multiple teams across different countries.</p>
+      <p>Aviv Group's listing creation funnels had grown independently across three countries, each with its own tech stack, design language, and codebase. One of the legacy products was fourteen years old. Maintenance costs were compounding, the user experience had fallen behind market standards, and the business was starting to see visible customer loss as a result.</p>
+      <p>The decision to merge all three funnels into a single unified product was driven primarily by engineering, but the UX case was equally strong. My goal was to lead the design of this new unified funnel, starting with France, Germany and Belgium.</p>
+      <p>I was the sole designer on the project. I owned the full design scope: research synthesis, information architecture, step sequencing, screen design, component creation, and contributing to the Aviv B2B design system as its design voice. I worked with a PM who had deep expertise in the German market, an engineering manager who later grew into a team of six to seven engineers, and a UX researcher I could consult, though she was not embedded in the project directly.</p>
+      <p>The big structural decisions of what steps to include, in what order, and what to prioritise for the first release were made collaboratively between me and the PM, with input from the EM. The step sequencing in particular was a design decision I owned and advocated for, including one significant pushback I will come back to in the approach section.</p>
     </section>
 
     <!-- What was the problem? -->
     <section class="case-study-block">
       <h2 class="case-study-h2">What was the problem?</h2>
-      <p>The previous listing funnels were outdated, inconsistent, and not scalable across markets. Each country had its own tech stack and design language, leading to duplicate efforts and a fragmented user experience. The lack of a unified design system made it difficult to introduce new features efficiently and maintain consistency.</p>
+      <p>For the business: six total different funnels meant 6 times more maintenance overhead, duplicated engineering effort, and an inability to ship improvements consistently across markets. With one legacy codebase dating back fourteen years, technical debt had become a real cost and a blocker to growth. The competitive pressure was sharpest in France and Germany; Belgium had little competition, but the product still needed to be brought up to standard. The business was already losing customers.</p>
+      <p>For users: the core pain was time. Creating a listing took between 45 minutes and an hour across the existing funnels, a significant friction point for estate agents who create listings regularly. The interfaces were inconsistent, outdated, and not built for the workflows agents actually had.</p>
+      <p>What we assumed: early on, I expected users would gather all the information they needed, property details, photos, documents, and complete the funnel in one sitting. This turned out to be wrong. In practice, agents filled in listings progressively, across multiple sessions, often because they were waiting on documents or photos from the property owner.</p>
+      <p>That single invalidated assumption shaped several key design decisions.</p>
       <figure class="case-study-fig case-study-fig-big">
         <img src="assets/image%202.png" alt="User research — sticky notes and affinity mapping"/>
       </figure>
@@ -96,7 +102,8 @@
     <!-- Activities -->
     <section class="case-study-block">
       <h2 class="case-study-h2">Activities</h2>
-      <p>I started with an audit of the existing listing funnels to identify commonalities and pain points. This involved analyzing user flows, conducting heuristic evaluations, and gathering feedback from stakeholders and users. Based on these insights, I developed user flows and wireframes to explore different solutions. I also collaborated closely with product managers, engineers, and UX researchers to ensure the solution met both business and user needs.</p>
+      <p>I started with an audit of the six existing funnels, mapping commonalities and divergences across markets, and running heuristic evaluations to surface the most critical UX failures. I also conducted a competitors benchmark across France, Germany, and Belgium to understand what the industry standard looked like, and to identify where we could lead rather than follow.</p>
+      <p>From there I developed user flows and wireframes to structure the new funnel, running iterative testing sessions with agents throughout. I collaborated closely with the PM on scope and feature prioritisation, with engineers on feasibility and component specs, and fed back into the Aviv B2B design system with new components created specifically for this product.</p>
       <figure class="case-study-fig case-study-fig-big">
         <img src="assets/CleanShot%202024-02-27%20at%2021.02-1.png" alt="Edit listing — form with property details"/>
       </figure>
@@ -108,14 +115,16 @@
     <!-- Solution -->
     <section class="case-study-block">
       <h2 class="case-study-h2">Solution</h2>
-      <p>The solution involved designing a new, modular listing creation funnel that could be adapted to different market requirements. The goal was to create a flexible and scalable system that reduced development time and improved the overall user experience.</p>
-      <p>I focused on simplifying complex workflows, reducing cognitive load, and providing clear feedback to users. This included streamlining data input, introducing smart defaults, and improving error handling. The new design also incorporated a consistent visual language based on the Aviv design system.</p>
+      <p>The core insight from competitive benchmarking was that the step-by-step funnel model was already the industry standard. Agents knew it, expected it, and were comfortable with it. The innovation was not in reinventing the structure but in executing it better: cleaner sequencing, reduced cognitive load, smarter defaults, and one significant forward-thinking bet.</p>
+      <p>The biggest lever on time-to-complete was placing the document and photo upload step at the beginning of the funnel. By letting users upload property documents and listing photos first, we could use AI to pre-fill a significant portion of the remaining fields automatically. This was a deliberate design decision I pushed for in early 2023, forward-thinking at the time, and it required stakeholder alignment to execute. It turned out to be the primary driver of the 30% reduction in completion time.</p>
+      <p>Beyond that, the design addressed the multi-session reality directly: every step auto-saves, a persistent save indicator gives users confidence their work is not lost, and a wizard component I designed shows progress across all steps, making it easy to resume from the dashboard and pick up exactly where you left off.</p>
+      <p>The tension between users and the business was also navigated here. Agents instinctively wanted more fields for precision; the business rightly wanted a leaner funnel. We landed on a optimal field set designed to cover the vast majority of use cases, with a clear path to add edge-case fields in subsequent releases.</p>
     </section>
 
     <!-- Creating components and contributing to design system -->
     <section class="case-study-block">
       <h2 class="case-study-h2">Creating components and contributing to design system</h2>
-      <p>An essential part of the project was creating new components and integrating existing ones into the Aviv design system. This ensured consistency across all products and facilitated future development.</p>
+      <p>A core part of the project was building reusable, scalable components. As the design voice for the B2B side of the Aviv design system, I created new components including the wizard, and integrated existing ones, ensuring the new funnel would be maintainable and extensible as the product expanded to other European markets and with other edge cases.</p>
       <figure class="case-study-fig case-study-fig-big">
         <img src="assets/Stepper%20CAF.png" alt="Step component — states and variants"/>
       </figure>
@@ -130,7 +139,8 @@
     <!-- Challenges -->
     <section class="case-study-block">
       <h2 class="case-study-h2">Challenges</h2>
-      <p>One of the biggest challenges was managing the complexity of merging three different listing funnels with distinct requirements and functionalities. This required extensive research, negotiation, and compromise to arrive at a solution that satisfied all stakeholders. Another challenge was ensuring the solution was performant and scalable across different devices and screen sizes. This involved close collaboration with engineers to optimize performance and responsiveness.</p>
+      <p>The most complex challenge was managing the convergence of six funnels with genuinely different requirements: different fields, different validation rules, different market expectations. Making decisions that worked across France, Belgium, and Germany, while keeping the first release focused and shippable.</p>
+      <p>The other significant challenge was the multi-session usage pattern. Building a reliable save-and-resume experience required close collaboration with engineering, particularly around the auto-save mechanism, and some components proved harder to build than initially scoped. We found solutions each time, but it reinforced the value of involving engineers early in design decisions.</p>
       <figure class="case-study-fig case-study-fig-big">
         <img src="assets/UEQS%20results%201.png" alt="Speed / Quality indicators"/>
       </figure>
@@ -139,7 +149,9 @@
     <!-- Results -->
     <section class="case-study-block">
       <h2 class="case-study-h2">Results</h2>
-      <p>The new listing creation funnel significantly improved the efficiency of listing creation, reducing the average time to create a listing by X% and increasing the conversion rate by Y%. User feedback was overwhelmingly positive, with users praising the intuitive interface and improved usability. The solution also laid the groundwork for future expansion into other European markets.</p>
+      <p>In user testing before launch, the new funnel achieved a 30% reduction in time to complete, from over 45 minutes down to on average 30, meeting the primary KPI we had defined from the start.</p>
+      <p>The UEQS evaluation returned a pragmatic score of 2.25, placing it in the excellent range. The hedonic score of 0.694 was what we expected : real estate agents are not using a listing tool to enjoy themselves; they are there to get the job done efficiently. A high pragmatic score was the right result.</p>
+      <p>The product was handed off and ready for launch in May 2024. I left Aviv shortly before it went live, so I do not have post-launch production data, but the testing results gave the team strong confidence going in.</p>
       <figure class="case-study-fig case-study-fig-big">
         <img src="assets/CleanShot%202024-03-27%20at%2023.31%201.png" alt="Contact step — listing funnel"/>
       </figure>
@@ -151,7 +163,9 @@
     <!-- Take-away -->
     <section class="case-study-block case-study-takeaway">
       <h2 class="case-study-h2">Take-away</h2>
-      <p>This project demonstrated the importance of a user-centered design approach, cross-functional collaboration, and a strong design system in delivering a successful product. It also highlighted the value of continuous iteration and testing in achieving optimal user experience.</p>
+      <p>The most important lesson from this project is that the best design decisions are not always the most visible ones. The AI prefill from documents and photos looks like a feature, but it was really an architectural choice about where to put friction and where to remove it. Pushing for that step order in early 2023 and holding the position through stakeholder conversations is what made the 30% reduction achievable.</p>
+      <p>If I were starting again, I would invest more time upfront in structured alignment sessions with all stakeholders, defining what success looks like before the design work begins. Early ambiguity about the target slowed us down initially, and clearer shared goals from day one would have made the first few months more efficient.</p>
+      <p>The open question I would have explored next: once live, how well did the tested metrics hold in production with broader audience ? And beyond the main use cases covered in this version, the edge cases, atypical property types and complex ownership structures, were the natural next design challenge.</p>
     </section>
 
     <!-- You may also like -->
