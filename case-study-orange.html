@@ -79,12 +79,19 @@
     <section class="case-study-block">
       <h2 class="case-study-h2">The company</h2>
       <p class="case-study-lead">Orange is the biggest French telecom provider, the B2B division has clients ranging from one mobile line to more than 50 000 for clients such as Airbus or LVMH. The product I worked on is designed to help all these clients with their various needs to be able to manage their mobile lines efficiently and by themselves.</p>
+      <p>When I joined, Gestion Lignes Mobiles (GLM) was already live, but it had been growing fast, new features were shipped at every release, and the product was starting to feel incoherent. The risk wasn't a lack of features, it was the opposite: without structure, the product would become harder to use and harder to evolve over time, just as the client base kept growing.</p>
+      <p>There was a clear financial angle too. Every task a client could do on their own was a call that didn't go to customer service. The bigger and more active the client base, the more this mattered, left unaddressed, support costs would only keep climbing.</p>
+      <p>Both customer service leadership and product leadership cared about this, for slightly different but aligned reasons: support cost reduction on one side, sustainable growth on the other. The feature roadmap itself wasn't really contested, we knew what to ship and when. The real tension was between shipping fast and keeping the product coherent enough to keep serving users well.</p>
+      <p>Success was tracked through NPS (7.5 → 8.3 over the two years) and total B2B client count (~500 000 → 600 000+). For individual features, we also tracked support ticket impact, though this was assessed case by case rather than as a blanket metric.</p>
     </section>
 
     <!-- What was the problem? -->
     <section class="case-study-block">
       <h2 class="case-study-h2">What was the problem?</h2>
-      <p>When I joined the product was already released but not mature it terms of feature set. My goal was to create a mature product that user would be able to use all by themselves without having to rely on calling the customer service.</p>
+      <p>The business problem: the product was growing in features faster than it was growing in coherence, which put both long-term usability and long-term support costs at risk.</p>
+      <p>The user problem: many everyday tasks still required a call to customer service, when they could and should be self-service.</p>
+      <p>When I started, my initial read was not "the product is immature" in the sense of missing functionality, it was that the rapid pace of feature additions had outpaced the structure needed to keep them making sense together. The job was less about discovering new user needs from scratch, and more about taking the research and knowledge we already had, and organizing it into a structure that could scale with the product over the long term.</p>
+      <p>This initial read held up well throughout the project, research (including a 100+ response survey on mobile priorities) largely confirmed rather than overturned our early thinking.</p>
       <figure class="case-study-fig case-study-fig-big case-study-fig-wide">
         <img src="assets/orange-survey-results.png" alt="Survey results: top 5 actions users wanted on the mobile version of Gestion Lignes Mobiles — PUK code, consumption tracking, SIM change, suspend line, manage options"/>
         <figcaption>Survey asking users for their top 5 actions to prioritise on the upcoming mobile version (103 responses)</figcaption>
@@ -94,7 +101,11 @@
     <!-- The strategy I implemented -->
     <section class="case-study-block">
       <h2 class="case-study-h2">The strategy I implemented</h2>
-      <p>This product which is dedicated to Mobile line management, used by over 600 000 B2B clients in France. I am the product Designer for this product and I worked with my Product Manager, Product Owner and engineering team to better understand the current workﬂows and features to be able to improve them over the course of 2 years. This understanding, along with data analytics allowed me to propose a new features, small or big that will help users get their needs met. I also designed a mobile version to provide critical features to clients to be able to access them from anywhere in the world.</p>
+      <p>I was the sole product designer on GLM for the full two years, owning the work end to end: research, UX flows, UI, and prototyping. I worked closely with my Product Manager, Product Owner, and engineering team daily, research findings I gathered would often go straight into design and testing, then into release and tracking.</p>
+      <p>Beyond execution, I directly influenced direction: it was my proposal that pushed the team toward building a dedicated mobile app, rather than continuing to patch the existing responsive mobile version.</p>
+      <p>Two decisions defined this project:</p>
+      <p>First, we restructured the product around a more coherent account and feature architecture, so that new features could keep being added without the product losing sense over time.</p>
+      <p>Second, we built a dedicated mobile companion app, focused on a small set of critical self-service tasks to replace a responsive mobile experience that was, in practice, nearly unusable.</p>
       <figure class="case-study-fig case-study-fig-big case-study-fig-wide">
         <img src="assets/orange-trip-workflow.png" alt="Unified journey for preparing travel abroad — flow for countries included or not in the package, voice and data options"/>
         <figcaption>Unified journey for preparing travel abroad: flow by package inclusion and voice/data options</figcaption>
@@ -104,7 +115,9 @@
     <!-- Activities -->
     <section class="case-study-block">
       <h2 class="case-study-h2">Activities</h2>
-      <p>I was leading research, managing focus groups with clients to discover their goals, doing usability testing to validate the screens created from hypothesis, using data analytics to inform choices for future changes or additions of features. I also worked hand-in-hand with other product teams and designer to make sure that our product would run smoothly within the ecosystem that user are using everyday. Being able to do all type of activities from research, all the way to delivery on a daily basis is exciting since the feedback and ideas that I write down during interviews are then being designed and tested by me, to finally be released and tracked to analyse their lifecycle.</p>
+      <p>The existing "mobile version" of GLM was just a responsive version of the desktop site, and it was close to unusable in practice. My hypothesis was that trying to make the full desktop feature set work responsively was the wrong approach, what users needed on mobile was a small, focused set of high-value tasks done well.</p>
+      <p>To validate this, I ran a survey (103 responses) asking users what they'd most want to do from a mobile version. The results : PUK code retrieval, consumption tracking, SIM change, line suspension, and managing options became the scope for v1.</p>
+      <p>The main tradeoff was timeline: building a dedicated app meant we couldn't ship full feature parity with desktop on day one. We addressed this by deliberately phasing the rollout, shipping the highest-value tasks first and expanding from there, rather than trying to do everything at once.</p>
       <div class="case-study-gallery">
         <figure class="case-study-fig">
           <img src="assets/orange-mobile-home.png" alt="Gestion Lignes Mobiles mobile home — search for a line, recent searches"/>
@@ -120,7 +133,8 @@
     <!-- Solution -->
     <section class="case-study-block">
       <h2 class="case-study-h2">Solution</h2>
-      <p>Over the course of 2 years I implemented more than 80 features, some to improve an existing function, some completely from scratch, like the mobile version of the product, in order to make GLM the best B2B mobile management tool on the market (won 2024 best digital experience award from CX Circle). Providing users with a tool that they can confidently use when they need it, support their missions within their own company and that can evolve in the future with the evolutions of their needs and the technologies was the goal that I aimed at.</p>
+      <p>Mobile app V1 shipped with five core self-service actions: PUK code retrieval, consumption tracking, SIM change, line suspension, and option management, covering the tasks users told us mattered most.</p>
+      <p>Travel/roaming flow (desktop): I redesigned the "preparing for travel abroad" journey into a single unified flow, branching by whether the destination was included in the client's package and by voice/data needs. Before this redesign, preparing for travel abroad was a common reason for support calls; afterward, users could configure this themselves. This redesign was desktop-only because it was made a year before the mobile version.</p>
       <figure class="case-study-fig case-study-fig-big case-study-fig-wide">
         <img src="assets/orange-solution-fleet.png" alt="Gestion de lignes mobiles — fleet overview, line status donut chart, hierarchical account and entity tree with line list"/>
         <figcaption>Fleet management: overview, status breakdown and hierarchical account view (Votre Parc)</figcaption>
@@ -130,13 +144,19 @@
     <!-- Challenges -->
     <section class="case-study-block">
       <h2 class="case-study-h2">Challenges</h2>
-      <p>The biggest challenge I face was to design meaningful features that supports user in their tasks. To achieve that, communication within the team was key. Having good relationship, and a lot of communication with PM, PO, EM and engineers really helped in facing timelines and tech issues together, to deliver features in a timely manner.</p>
+      <p>The part of this project that doesn't show up in "shipped 80 features, NPS went up" is the constant balancing act underneath it: keeping the product coherent while continuing to ship at pace, and serving clients with one mobile line and clients with fifty thousand lines within the same product.</p>
+      <p>If I were to redo this project, I'd push to segment small-client and enterprise-client needs earlier. Designing for "a B2B client" as a single persona for too long meant some early decisions had to be revisited later.</p>
+      <p>Looking forward, there are two clear directions: extending the mobile app toward enterprise/fleet management features (currently desktop-only), and building more explicitly tailored experiences by client segment, rather than a single experience stretched to fit everyone.</p>
     </section>
 
     <!-- Results and metrics -->
     <section class="case-study-block">
       <h2 class="case-study-h2">Results and metrics</h2>
-      <p>The main KPIs we tracked from the business point of view was the NPS and the total number of clients. When I join the NPS was 7.5 and 8.3 after 2 years. Regarding the total number of B2B clients, we went from around 500 000 to more than 600 000 after two years and increasing. It was thrilling to be part of such a team and to see it thrive this way.</p>
+      <p>The biggest shift this work enabled was making GLM genuinely work for both ends of the client spectrum at once: a client with a single mobile line, and an enterprise client like Airbus or LVMH managing 50,000+ lines, could both use the same product effectively.</p>
+      <p>NPS (7.5 → 8.3) and client growth (~500k → 600k+) are organization-level signals that this direction was working, even if they reflect the combined effect of many initiatives rather than any single feature. Where we could isolate impact at the feature level, particularly self-service features that replaced support-call workflows, ticket volume for those specific actions dropped clearly.</p>
+      <p>For the actions covered by the mobile app and the roaming redesign, support ticket volume dropped clearly, these were tasks users had previously needed to call in for, and could now do themselves.</p>
+      <p>On the dashboard side, we also had a big topic to tackle. Small clients used GLM only a few times a year, while large enterprise clients used it daily. For a client managing 10,000+ lines, an overview of how many lines were active, suspended, etc. was essential. For a client with a single line, that same dashboard was effectively dead weight.</p>
+      <p>This was a real limitation of the shared design: features and views that worked well for enterprise clients weren't necessarily useful, or could even get in the way, for the smallest clients, and vice versa.</p>
       <figure class="case-study-fig case-study-fig-big case-study-fig-wide">
         <img src="assets/orange-results-metrics.png" alt="Gestion Lignes Mobiles dashboard — KPIs, line status donut chart, status cards, search and export, fleet table"/>
         <figcaption>Clickrate for the homepage main elements</figcaption>
@@ -146,7 +166,7 @@
     <!-- Take-away -->
     <section class="case-study-block case-study-takeaway">
       <h2 class="case-study-h2">Take-away</h2>
-      <p>This project taught me a great deal about communication within a big organisation. I also learned how to manage expectations from people in different teams, with different goals in order to deliver the best possible product to my users. I also started mentoring and leading my own initiatives which is a very positive point to look back on and that I’ll be able to use in my future projects.</p>
+      <p>This project taught me how to balance structure with speed, keeping a fast-moving product coherent without slowing down delivery. It also taught me how much can be achieved as a sole designer when research, design, and delivery are tightly looped together. It also shaped how I think about segmentation: designing for "B2B users" as one group works only up to a point, and the earlier you identify where that group actually splits, the better the product holds up over time.</p>
     </section>
 
     <!-- You may also like -->
